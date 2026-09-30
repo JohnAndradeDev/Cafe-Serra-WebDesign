@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Café Serra: cafés especiais torrados em pequenos lotes.">
+    <title>Café Serra</title>
+
+    <!-- liga o CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- topo com o menu -->
+    <header id="cabecalho-principal">
+
+        <div class="logo">Café Serra</div>
+
+        <!-- checkbox escondido que abre o menu no celular -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="botao-menu">&#9776;</label>
+
+        <ul class="menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#processo">Processo</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#assinatura">Assinatura</a></li>
+            <li><a href="#horarios">Horários</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+        </ul>
+    </header>
+
+    <!-- banner do começo -->
+    <section id="inicio">
+
+        <h1>Café de verdade, torrado devagar</h1>
+
+        <p>
+            Grãos selecionados de pequenas fazendas, torrados em lotes
+            de poucos quilos e entregues frescos na sua casa.
+        </p>
+
+        <a href="#cardapio" class="botao-primario">Ver cardápio</a>
+
+        <!-- bolinha amarela de enfeite -->
+        <div class="circulo-decorativo"></div>
+    </section>
+
+    <!-- sobre nós -->
+    <section id="sobre" class="fundo-claro">
+        <div class="container">
+            <h2>Sobre nós</h2>
+
+            <p class="texto-justificado">
+                O Café Serra nasceu em uma cozinha pequena, com uma torra de
+                um quilo por vez. Hoje seguimos a mesma regra: comprar direto
+                do produtor, provar cada lote e só vender o que gostaríamos de
+                beber em casa.
+            </p>
+
+            <p class="texto-justificado">
+                Trabalhamos com grãos de altitude, colhidos à mão e secos ao
+                sol. Cada pacote traz a data da torra, a fazenda de origem e
+                notas de sabor para você escolher com segurança.
+            </p>
+
+            <p class="texto-justificado">
+                Nosso compromisso é simples: pagar preço justo ao produtor,
+                torrar com cuidado e explicar tudo com clareza.
+            </p>
+        </div>
+    </section>
+
+    <!-- cardápio -->
+    <section id="cardapio">
+        <div class="container">
+            <h2>Nosso cardápio</h2>
+
+            <div class="grade">
+
+                <article class="card">
+                    <div class="foto-card"><img src="assets/images/expresso-café.jpg" alt="Xícara de café espresso"></div>
+                    <h3>Espresso</h3>
+                    <p>Encorpado, com notas de chocolate amargo.</p>
+                    <span class="preco">R$ 6,00</span>
+                </article>
+
+                <article class="card">
+                    <div class="foto-card clara"><img src="assets/images/café-coado.jpg" alt="Café coado servido em uma xícara"></div>
+                    <h3>Coado</h3>
+                    <p>Suave e limpo, com acidez cítrica leve.</p>
+                    <span class="preco">R$ 8,00</span>
+                </article>
+
+                <article class="card">
+                    <div class="foto-card dourada"><img src="assets/images/café-cappuccino.jpg" alt="Cappuccino com espuma cremosa"></div>
+                    <h3>Cappuccino</h3>
+                    <p>Espresso, leite vaporizado e espuma cremosa.</p>
+                    <span class="preco">R$ 12,00</span>
+                </article>
+
+                <article class="card">
+                    <div class="foto-card"><img src="assets/images/café-gelado.jpg" alt="Copo de café gelado com gelo"></div>
+                    <h3>Café gelado</h3>
+                    <p>Extração a frio por 12 horas, doce e refrescante.</p>
+                    <span class="preco">R$ 14,00</span>
+                </article>
+
+                <article class="card">
+                    <div class="foto-card clara"><img src="assets/images/pão-de-queijo.jpg" alt="Pão de queijo assado"></div>
+                    <h3>Pão de queijo</h3>
+                    <p>Assado na hora, crocante por fora e macio por dentro.</p>
+                    <span class="preco">R$ 7,00</span>
+                </article>
+
+                <article class="card">
+                    <div class="foto-card dourada"><img src="assets/images/bolo-chocolate.jpg" alt="Fatia de bolo de chocolate"></div>
+                    <h3>Bolo do dia</h3>
+                    <p>A receita muda a cada semana. Pergunte no balcão.</p>
+                    <span class="preco">R$ 10,00</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- passo a passo -->
+    <section id="processo" class="fundo-claro">
+        <div class="container">
+            <h2>Da fazenda à xícara</h2>
+
+            <div class="passos">
+
+                <div class="passo">
+                    <h3>1. Colheita</h3>
+                    <p>Os frutos maduros são colhidos à mão, um a um.</p>
+                </div>
+
+                <div class="passo">
+                    <h3>2. Secagem</h3>
+                    <p>Os grãos secam ao sol em terreiros por até 20 dias.</p>
+                </div>
+
+                <div class="passo">
+                    <h3>3. Torra</h3>
+                    <p>Torramos em pequenos lotes e provamos cada um.</p>
+                </div>
+
+                <div class="passo">
+                    <h3>4. Entrega</h3>
+                    <p>O pacote sai em até dois dias após a torra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- galeria (blocos coloridos no lugar das fotos) -->
+    <section id="galeria">
+        <div class="container">
+            <h2>Um pouco do nosso dia a dia</h2>
+
+            <div class="galeria">
+
+                <div class="bloco-galeria">
+                    <span>A torra da manhã</span>
+                </div>
+
+                <div class="bloco-galeria b2">
+                    <span>O balcão</span>
+                </div>
+
+                <div class="bloco-galeria b3">
+                    <span>Grãos em repouso</span>
+                </div>
+
+                <div class="bloco-galeria b4">
+                    <span>Café coado na hora</span>
+                </div>
+
+                <div class="bloco-galeria">
+                    <span>Pacotes prontos</span>
+                </div>
+
+                <div class="bloco-galeria b2">
+                    <span>A mesa da esquina</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- planos de assinatura -->
+    <section id="assinatura">
+        <div class="container">
+            <h2>Receba em casa</h2>
+
+            <div class="grade">
+
+                <article class="card">
+                    <h3>Suave</h3>
+                    <p>250 g por mês, torra clara e adocicada.</p>
+                    <span class="preco">R$ 39,00</span>
+                </article>
+
+                <article class="card">
+                    <h3>Equilibrado</h3>
+                    <p>500 g por mês, torra média e corpo macio.</p>
+                    <span class="preco">R$ 69,00</span>
+                </article>
+
+                <article class="card">
+                    <h3>Intenso</h3>
+                    <p>1 kg por mês, torra escura e bem encorpada.</p>
+                    <span class="preco">R$ 119,00</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- horários -->
+    <section id="horarios" class="fundo-claro">
+        <div class="container">
+            <h2>Quando estamos abertos</h2>
+
+            <div class="horarios">
+
+                <div class="horario-linha">
+                    <span>Segunda a sexta</span>
+                    <strong>7h às 19h</strong>
+                </div>
+
+                <div class="horario-linha">
+                    <span>Sábado</span>
+                    <strong>8h às 18h</strong>
+                </div>
+
+                <div class="horario-linha">
+                    <span>Domingo</span>
+                    <strong>8h às 14h</strong>
+                </div>
+
+                <div class="horario-linha">
+                    <span>Feriados</span>
+                    <strong>9h às 14h</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- depoimentos -->
+    <section id="depoimentos">
+        <div class="container">
+            <h2>O que dizem</h2>
+
+            <blockquote class="depoimento">
+                <p>O melhor coado que já tomei fora de casa. Voltei toda semana.</p>
+                <footer>Marina, cliente desde 2023</footer>
+            </blockquote>
+
+            <blockquote class="depoimento">
+                <p>Gosto de saber a fazenda e a data da torra em cada pacote.</p>
+                <footer>Carlos, assinante</footer>
+            </blockquote>
+
+            <blockquote class="depoimento">
+                <p>O pão de queijo com espresso virou meu café da manhã.</p>
+                <footer>Paula, vizinha da loja</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- perguntas frequentes (clica pra abrir) -->
+    <section id="duvidas" class="fundo-claro">
+        <div class="container">
+            <h2>Dúvidas comuns</h2>
+
+            <details>
+                <summary>Qual a validade do café?</summary>
+                <p>Recomendamos consumir em até 30 dias após a torra para sentir todo o sabor.</p>
+            </details>
+
+            <details>
+                <summary>Vocês moem o café?</summary>
+                <p>Sim. Basta avisar como você prepara: coador, prensa francesa ou máquina.</p>
+            </details>
+
+            <details>
+                <summary>Tem opção sem leite?</summary>
+                <p>Tem. Os cafés puros e o gelado são feitos só com água e grãos.</p>
+            </details>
+
+            <details>
+                <summary>Posso encomendar bolo para festa?</summary>
+                <p>Pode, com dois dias de antecedência. Fale com a equipe no balcão.</p>
+            </details>
+
+            <details>
+                <summary>Vocês entregam?</summary>
+                <p>Entregamos os pacotes de grãos. Bebidas e lanches são só no local.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- rodapé -->
+    <footer>
+        <p>&copy; 2026 Café Serra. Projeto acadêmico de Web Design.</p>
+        <p>Feito com HTML e CSS externo.</p>
+    </footer>
+
+</body>
+
+</html>

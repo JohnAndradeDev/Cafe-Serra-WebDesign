@@ -1,0 +1,413 @@
+/* style.css - estilo do site Café Serra */
+
+/* cores e medidas que uso no site todo */
+:root {
+  --cor-principal: #0f3d3e;
+  --cor-destaque: #f2b705;
+  --cor-fundo: #f3f7f6;
+  --cor-texto: #1d1d1f;
+  --raio: 10px;
+}
+
+/* zera as margens do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* rolagem suave nos links do menu */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px; /* espaço pro cabeçalho fixo */
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* títulos com outra fonte */
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--cor-principal);
+}
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* contorno amarelo pra quem usa o teclado */
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+/* cabeçalho fixo no topo (estilo por ID) */
+#cabecalho-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: var(--cor-principal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: var(--cor-destaque);
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+/* menu: no celular ele abre e fecha pelo checkbox */
+#menu-toggle {
+  display: none;
+}
+
+.botao-menu {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.menu a {
+  display: block;
+  color: white;
+  padding: 8px 14px;
+  border-radius: var(--raio);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.menu a:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-principal);
+}
+
+/* banner do começo da página */
+#inicio {
+  background-color: var(--cor-principal);
+  background-image: linear-gradient(135deg, #0f3d3e 0%, #1f6f6b 100%);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#inicio h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+#inicio p {
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+}
+
+/* bolinha amarela no canto */
+.circulo-decorativo {
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: var(--cor-destaque);
+  opacity: 0.25;
+}
+
+/* botão que uso em mais de um lugar */
+.botao-primario {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: var(--cor-principal);
+  padding: 12px 28px;
+  border: 2px solid var(--cor-destaque);
+  border-radius: var(--raio);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.botao-primario:hover {
+  background-color: transparent;
+  color: var(--cor-destaque);
+  transform: scale(1.05);
+}
+
+section {
+  padding: 60px 20px;
+}
+
+/* segura o conteúdo no meio da tela */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.texto-justificado {
+  text-align: justify;
+}
+
+.fundo-claro {
+  background-color: white;
+}
+
+/* grade de 3 colunas dos cards */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #d5e0de;
+  border-radius: var(--raio);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+/* o card sobe um pouco quando passa o mouse */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: var(--cor-principal);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.preco {
+  color: #b58500;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* quadradinho colorido no lugar de foto */
+.foto-card {
+  height: 160px;
+  margin-bottom: 14px;
+  border-radius: var(--raio);
+  background-color: var(--cor-principal);
+  overflow: hidden; /* corta a imagem nos cantos arredondados */
+}
+
+/* a foto ocupa o quadro todo sem ficar esticada */
+.foto-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto-card.clara {
+  background-color: #8fc1b5;
+}
+
+.foto-card.dourada {
+  background-color: var(--cor-destaque);
+}
+
+/* passos do processo lado a lado */
+.passos {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.passo {
+  flex: 1 1 200px;
+  padding: 20px;
+  border-left: 6px solid var(--cor-destaque);
+  background-color: var(--cor-fundo);
+}
+
+/* galeria */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.bloco-galeria {
+  height: 160px;
+  border-radius: var(--raio);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--cor-principal);
+  transition: transform 0.3s;
+}
+
+.bloco-galeria:hover {
+  transform: scale(1.03);
+}
+
+.bloco-galeria.b2 {
+  background-color: #1f6f6b;
+}
+
+.bloco-galeria.b3 {
+  background-color: #8fc1b5;
+  color: var(--cor-principal);
+}
+
+.bloco-galeria.b4 {
+  background-color: var(--cor-destaque);
+  color: var(--cor-principal);
+}
+
+/* horários */
+.horarios {
+  max-width: 500px;
+  margin: 0 auto;
+  border: 2px solid var(--cor-principal);
+  border-radius: var(--raio);
+  padding: 10px 20px;
+}
+
+.horario-linha {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #d5e0de;
+}
+
+.horario-linha:last-child {
+  border-bottom: none;
+}
+
+/* depoimentos */
+.depoimento {
+  border-left: 4px solid var(--cor-principal);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* perguntas frequentes */
+details {
+  background-color: white;
+  border: 1px solid #d5e0de;
+  border-radius: var(--raio);
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--cor-principal);
+}
+
+details p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* rodapé */
+footer {
+  background-color: var(--cor-texto);
+  color: #cfd8d6;
+  text-align: center;
+  padding: 24px 10px;
+  font-size: 0.9rem;
+}
+
+/* tablet: cards em 2 colunas */
+@media (max-width: 800px) {
+  .grade,
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #inicio h1 {
+    font-size: 2.3rem;
+  }
+}
+
+/* celular: 1 coluna e menu vira botão */
+@media (max-width: 600px) {
+  .grade,
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .botao-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--cor-principal);
+    padding: 10px;
+  }
+
+  /* quando o checkbox está marcado, o menu aparece */
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+}
+
+/* quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto;
+  }
+}
